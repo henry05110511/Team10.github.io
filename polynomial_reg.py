@@ -8,7 +8,7 @@ from sklearn.pipeline import make_pipeline
 # Example DataFrame setup (replace this with your actual DataFrame)
 df = pd.read_csv('percentage_changes_decr_price/2012_percentage_changes.csv')
 
-df = df[(df['dept_id'] == 'FOODS_1') & (df['store_id'] == 'TX_1')]
+df = df[(df['dept_id'] == 'FOODS_2') & (df['store_id'] == 'TX_1')]
 df['price_change'] = df['price_change'].abs()
 df = df.dropna()
 
