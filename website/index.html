@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEAM 10</title>
+    <!-- CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles.css" media="all">
+
+</head>
+<body onload="showSection('home')">
+    <header>
+        <h1>TEAM 10</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="#services" onclick="showSection('services')">Services</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="button">GET STSARTED</button>
+    </header>
+
+    <section id="home">
+        <h2>Quickly and automatically adjust pricing for retail items</h2>
+        <p>Based on past product information and sales, we can make data visualization charts about price elasticity to help designate optimal pricing plans.</p>
+        <button onclick="customizeNow()">GET STARTED</button>
+    </section>
+
+    <section id="about" style="display: none;">
+        <h2>About Us</h2>
+        <p>This is where you can write about your company or yourself. Visit our website <a href="http://www.example.com">www.example.com</a>.</p>      
+    </section>
+
+    <section id="services" style="display: none;">
+        <!-- Services section content -->
+    </section>
+
+    <section id="contact" style="display: none;">
+        <!-- Contact section content -->
+    </section>
+
+    <footer>
+        <p>&copy; Team 10</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // 隐藏所有section
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // 显示对应的section
+            var sectionToShow = document.getElementById(sectionId);
+            sectionToShow.style.display = 'block';
+        }
+
+        
+        function customizeNow() {
+            // 这里可以添加按钮点击后的操作，比如跳转到另一个页面或显示一个弹窗等
+            alert("Customize now button clicked!");
+        }
+    </script>
+</body>
+</html>
