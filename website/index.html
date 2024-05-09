@@ -70,7 +70,7 @@
         <input type="text" id="year" name="year">
     
         <!-- Submit Button -->
-        <button class="button" onclick="submitForm()">Submit</button>
+        <button onclick="submitForm()">Submit</button>
     
         <!-- Result Section (Initially Hidden) -->
         <div id="resultSection" style="display: none;">
@@ -140,28 +140,22 @@
 
 
         function displayResults(data) {
-            // 显示结果页面
+            
+            // show result page
             var resultSection = document.getElementById("resultSection");
             resultSection.style.display = "block";
-        
-            // 显示优化价格
+            
+            // show visuallization graph
             var visualization = document.getElementById("visualization");
             visualization.innerHTML = "Optimized Price: " + data.optimized_price;
-        
-            // 显示图像
-            var img = document.createElement('img');
-            img.src = 'data:image/png;base64,' + data.image;
-            var visualizationDiv = document.getElementById("visualization");
-            visualizationDiv.appendChild(img);
-        
-            // 生成建议
+    
+            // generate suggestion
             var suggestion = "Based on the input given we suggest..." + data.optimized_price;
-        
-            // 显示建议
+            
+            // show suggestion
             var suggestionElement = document.getElementById("suggestion");
             suggestionElement.textContent = suggestion;
         }
-        
         
     </script>
 </body>
